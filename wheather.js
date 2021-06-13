@@ -1,7 +1,13 @@
 const weather = document.querySelector(".js-weather");
+const weatherTitle = document.querySelector(".weather-box__title"),
+    weatherImg = document.querySelector(".weather-box__img"),
+    weatherPlace = document.querySelector(".weather-box__place"),
+    weatherTemp = document.querySelector(".weather-box__temp"),
+    weatherWind = document.querySelector(".weather-box__wind");
 
 const API_KEY = "ff270edd5ae1c1bfa6485fcb30c00733";
 const COORDS = 'coords';
+
 
 function getWeather(lat, lng) {
     fetch(
@@ -10,10 +16,20 @@ function getWeather(lat, lng) {
             return response.json();
         })
         .then(function (json) {
-            const temperature = json.main.temp;
+            const country = json.sys.country;
             const place = json.name;
-            weather.innerText = `${temperature} @ ${place}`;
-        });
+            const weatherName = json.weather[0].main;
+            const weatherDesc = json.weather[0].description;
+            const temperature = Math.floor(json.main.temp);
+            const windSpeed = Math.floor(json.wind.speed);
+            const icon = json.weather[0].icon;
+            const iconUrl = `http://openweathermap.org/img/wn/${icon}.png`;
+            
+            weatherTitle.innerText = weatherDesc;
+            weatherImg.src = iconUrl;
+            weatherTemp.innerText = `${temperature}℃`;
+            weatherPlace.innerText = `${country}, ${place}`;
+            weatherWind.innerText = `Wind : ${windSpeed}m/s`;        });
 }
 
 function saveCoords(coordsObj) {
