@@ -1,0 +1,249 @@
+@font-face {
+    font-family: 'LAB디지털';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+*{
+    font-family: 'LAB디지털';
+}
+
+.screen{
+    line-height: 80vh;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 4px black;
+    display: none;
+}
+
+@media screen and (max-width: 768px), (max-height: 768px) {
+    .background{
+        display: none;
+    }
+    .screen{
+        display: block;
+    }
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+background-color: #2c3e50;
+}
+
+.contents{
+    text-align: center;
+    text-shadow: 5px 5px 0px black;
+    color: white;
+}
+
+.js-clock {
+    animation: neon 2s ease infinite;
+    -moz-animation: neon 2s ease infinite;
+    -webkit-animation: neon 2s ease infinite;
+}
+
+@keyframes neon {
+    0%,
+    100% {
+        text-shadow: 0 0 1vw #1C16FA, 0 0 3vw #1C16FA, 0 0 10vw #1C16FA, 0 0 10vw #1C16FA, 0 0 .4vw #D128FE, .5vw .5vw .1vw #691480;
+        color: #ffffff;
+    }
+    50% {
+        text-shadow: 0 0 .5vw #0E0B80, 0 0 1.5vw #0E0B80, 0 0 5vw #0E0B80, 0 0 5vw #0E0B80, 0 0 .2vw #0E0B80, .5vw .5vw .1vw #340A40;
+        color: #ffffff;
+    }
+}
+
+.js-weather{
+    display: inline-block;
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.js-form input[type="text"], .js-toDoForm input[type="text"]{
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+}
+
+input[type="text"]::placeholder{
+    text-shadow: 0 0 2px black;
+}
+
+.h2{
+    display: flex;
+    justify-content: center;
+}
+.h2>h2{
+    width: calc(100% / 2 - 200px);
+    max-width: 400px;
+    margin: 50px;
+    padding-right: 20px;
+}
+
+.todolist{
+    height: 50vh;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.Pending, .Finished{
+    width: calc(100% / 2 - 200px);
+    max-width: 400px;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 6px white;
+    margin: 50px;
+    overflow: auto;
+    padding-right: 20px;
+}
+
+.Pending>li, .Finished>li{
+    margin: 5px;
+    font-size: 2vw;
+    text-align: right;
+}
+
+.Pending>li>span, .Finished>li>span{
+    font-size: 25px;
+    display: block;
+    margin-right: 30px;
+    word-wrap: break-word;
+}
+
+.Pending::-webkit-scrollbar, .Finished::-webkit-scrollbar {
+    width: 5px; /*스크롤바의 너비*/
+}
+
+.Pending::-webkit-scrollbar-thumb, .Finished::-webkit-scrollbar-thumb {
+    background-color: transparent; /*스크롤바의 색상*/
+    border-radius: 10px;
+    background-clip: padding-box;
+    box-shadow: inset 0px 0px 5px white;
+}
+
+.Pending::-webkit-scrollbar-track, .Finished::-webkit-scrollbar-track {
+    background-color: transparent; /*스크롤바 트랙 색상*/
+}
+
+.btn {
+cursor: pointer;
+}
+body {
+color: #34495e;
+}
+
+.clicked {
+color: #7f8c8d;
+}
+
+.form,
+.greetings {
+display: none;
+}
+
+.showing {
+display: block;
+}
+
+@keyframes fadeIn {
+from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
+
+.bgImage {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+width: 100%;
+height: 100%;
+z-index: -1;
+animation: fadeIn 0.5s linear;
+background-size: cover;
+background-repeat: repeat;
+}
+
+.astro:hover{
+    opacity: 0.3;
+}
+
+.astro1{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 5%;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-name: astro1;
+}
+
+@keyframes astro1 {
+    0%{ transform: translate(-100%, 0) rotate(30deg);}
+    100%  { transform: translate(50vw, 500%); }
+}
+
+.astro2{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5%;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-name: astro2;
+}
+
+@keyframes astro2 {
+    0%{ transform: translate(-100%, -100%);}
+    33%  { transform: translate(50vw, 200%) rotate(30deg); }
+    66% {transform: translate(100vw, 0%) rotate(60deg);}
+    100% { transform: translate(100vw, 0%);}
+}
+
+.astro3{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 5%;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-name: astro3;
+}
+
+@keyframes astro3 {
+    0%{ transform: translate(-200%, 100%);}
+    33%  { transform: translate(-635%, -20%) rotate(80deg); }
+    66% {transform: translate(-100vw, 0%) rotate(0deg);}
+    100% { transform: translate(-100vw, 0%);}
+}
+
+.satellite{
+    position: absolute;
+    top: 10;
+    left: 10%;
+    width: 15%;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-name: satellite;
+}
+
+@keyframes satellite {
+    0%{ transform: translate(0, 0);}
+    50%  { transform: translate(5%, 5%) rotate(10deg); }
+}
