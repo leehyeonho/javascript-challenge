@@ -3,7 +3,6 @@ const toDoForm = document.querySelector(".js-toDoForm"),
     toDoList = document.querySelector(".js-toDoList"),
     todoPending = document.querySelector(".Pending"),
     todoFinished = document.querySelector(".Finished");
-
 const PENDING = "PENDING";
 const FINISHED = "FINISHED";
 
