@@ -87,6 +87,8 @@ background-color: #2c3e50;
 input[type="text"]::placeholder{
     text-shadow: 0 0 2px black;
     box-shadow: 0px 3px 4px -4px white;
+    color: white;
+    opacity: 0.7;
 }
 
 .h2{

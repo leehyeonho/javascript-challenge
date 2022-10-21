@@ -1,64 +1,74 @@
 <!DOCTYPE html>
-<html lang="kr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO DO SPACE</title>
-    <link rel="stylesheet" href="index.css">
-    <script src="https://kit.fontawesome.com/1a82f71215.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="background">
-        <div class="js-weather">
-            <div class="weather-box">
-                <img class="weather-box__img" src="#" />
-                <div>
-                    <span class="weather-box__temp"></span>
-                    <span class="weather-box__title"></span>
-                    <span class="weather-box__wind"></span>
-                    <span class="weather-box__place"></span>
-                </div>
-            </div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/reset.css" />
+    <link rel="stylesheet" href="src/index.css" />
+    <script
+      src="https://kit.fontawesome.com/1a82f71215.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header-container">
+      <nav class="nav-bar">
+        <ul class="nav-bar__ul">
+          <li class="nav-bar__ul__li"></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-container"></main>
+    <footer class="footer-container">
+      <ul class="footer-ul">
+        <li class="footer-ul-li">
+          <i class="fa-brands fa-windows fa-xl"></i>
+        </li>
+        <li class="footer-ul-li">
+          <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+        </li>
+      </ul>
+      <div class="footer-datetime js-clock">
+        <span class="time"></span>
+        <span class="date"></span>
+      </div>
+    </footer>
+    <div class="datetime-extend">
+      <div class="datetime-extend__datetime">
+        <div class="datetime-extend__datetime__time"></div>
+        <div class="datetime-extend__datetime__date"></div>
+      </div>
+      <div class="division"></div>
+      <div class="datetime-extend__calendar">
+        <div class="datetime-extend__calendar__title">
+          <span class="yearmonth">2022년 10월</span>
+          <div class="move-buttons">
+            <i class="fa-solid fa-chevron-left"></i>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
         </div>
-        <img class="astro astro1" src="images/astronaut.png" alt="">
-        <img class="astro astro2" src="images/astronaut.png" alt="">
-        <img class="astro astro3" src="images/astronaut.png" alt="">
-        <img class="satellite" src="images/satellite.png" alt="">
-        <div class="contents">
-            <div class="js-clock">
-                <h1>00:00</h1>
-            </div>
-            
-            <form class="js-form form">
-                <input type="text" placeholder="What is your name?" />
-            </form>
-            <h1 class="js-greetings greetings"></h4>
-            <form class="js-toDoForm">
-                <input type="text" placeholder="Write a to do" />
-            </form>
-            <div class="h2">
-                <h2>Pending</h1>
-                <h2>Finished</h2>
-            </div>
-            <div class="todolist">
-                  <div class="Pending">
-                    
-                  </div>
-                  <div class="Finished">
-                    
-                  </div>
-              </div>
+        <div class="datetime-extend__calendar__calendar">
+          <ul class="calendar">
+            <li class="calendar-item week">일</li>
+            <li class="calendar-item week">월</li>
+            <li class="calendar-item week">화</li>
+            <li class="calendar-item week">수</li>
+            <li class="calendar-item week">목</li>
+            <li class="calendar-item week">금</li>
+            <li class="calendar-item week">토</li>
+          </ul>
         </div>
+      </div>
     </div>
     <div class="screen">
-        <h1>The screen is too small.</h1><br>
+      <h1>The screen is too small.</h1>
+      <br />
     </div>
-    <script src="clock.js"></script>
-    <script src="greeting.js"></script>
-    <script src="todo.js"></script>
-    <script src="bg.js"></script>
-    <script src="wheather.js"></script>
-    
-</body>
+    <script src="src/bg.js"></script>
+    <script src="src/clock.js"></script>
+    <script src="src/calendar.js"></script>
+    <script src="src/screen.js"></script>
+  </body>
 </html>
