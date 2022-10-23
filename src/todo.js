@@ -30,6 +30,7 @@ function deleteToDo(event) {
 
 function createFinBtn() {
     const finBtn = document.createElement("button");
+    // finBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
     finBtn.innerText = "✅";
     finBtn.addEventListener("click", finishTodo);
     return finBtn;

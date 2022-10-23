@@ -13,14 +13,80 @@
     ></script>
   </head>
   <body>
-    <header class="header-container">
+    <!-- <header class="header-container">
       <nav class="nav-bar">
         <ul class="nav-bar__ul">
           <li class="nav-bar__ul__li"></li>
         </ul>
       </nav>
-    </header>
-    <main class="main-container"></main>
+    </header> -->
+    <div class="background-icons">
+      <div class="icons__icon">
+        <img src="src/images/computer.ico" alt="">
+        <span>내 컴퓨터</span>
+      </div>
+      <div class="icons__icon">
+        <img src="src/images/recycle.ico" alt="">
+        <span>휴지통</span>
+      </div>
+    </div>
+    <main class="to-do-window">
+      <div class="window-header">
+        <div class="window-header__left">
+          <img src="src/images/nomad-coder.svg" alt="">
+          <div class="window-header__left__title">
+            TO DO LIST
+          </div>
+        </div>
+        <div class="window-header__right">
+          <i class="fa-solid fa-minus fa-xs"></i>
+          <i class="fa-regular fa-square fa-xs"></i>
+          <i class="fa-solid fa-xmark fa-xs"></i>
+        </div>
+      </div>
+      <div class="window-main">
+        <div class="login-screen">
+          <form class="js-form form">
+            <input type="text" class="login-input" placeholder="What is your name?" />
+          </form>
+        </div>
+        <div class="main-screen">
+          <div class="main-screen__top">
+            <div class="main-screen__top__left">
+              <h1 class="js-greetings greetings"></h1>
+              <form class="js-toDoForm">
+                <input type="text" class="todo-input" placeholder="Write a to do" />
+              </form>
+            </div>
+            <div class="main-screen__top__right">
+              <div class="js-weather">
+                <div class="weather-box">
+                    <img class="weather-box__img" src="#" />
+                    <div>
+                        <span class="weather-box__temp"></span>
+                        <span class="weather-box__title"></span>
+                        <span class="weather-box__wind"></span>
+                        <span class="weather-box__place"></span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-screen-content">
+            <div class="todolist">
+              <div class="todolist__title">
+                <h2>To Do</h1>
+                  <h2>Finished</h2>
+              </div>
+              <div class="todolist__box">
+                <div class="Pending"></div>
+                <div class="Finished"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer class="footer-container">
       <ul class="footer-ul">
         <li class="footer-ul-li">
@@ -29,13 +95,18 @@
         <li class="footer-ul-li">
           <i class="fa-solid fa-magnifying-glass fa-xl"></i>
         </li>
+        <li class="footer-ul-li">
+          <span>
+            <img src="src/images/nomad-coder.svg" alt="">
+          </span>
+        </li>
       </ul>
       <div class="footer-datetime js-clock">
         <span class="time"></span>
         <span class="date"></span>
       </div>
     </footer>
-    <div class="datetime-extend">
+    <div class="datetime-extend hide">
       <div class="datetime-extend__datetime">
         <div class="datetime-extend__datetime__time"></div>
         <div class="datetime-extend__datetime__date"></div>
@@ -66,9 +137,12 @@
       <h1>The screen is too small.</h1>
       <br />
     </div>
+    <script src="src/common.js"></script>
     <script src="src/bg.js"></script>
     <script src="src/clock.js"></script>
+    <script src="src/greeting.js"></script>
+    <script src="src/todo.js"></script>
     <script src="src/calendar.js"></script>
-    <script src="src/screen.js"></script>
+    <script src="src/wheather.js"></script>
   </body>
 </html>
