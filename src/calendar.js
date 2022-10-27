@@ -14,7 +14,7 @@ function getCalendar(year, month) {
     const calendarWeekCount = Math.ceil((calendarStartDayOfTheWeek + calendarLastDay) / 7);
     // calendarContainer.querySelector(".blank").remove();
     // calendarContainer.querySelector(".day").remove();
-    for (let i = calendarStartDayOfTheWeek-1; i >= 0; i--) {
+    for (let i = calendarStartDayOfTheWeek; i >= 0; i--) {
         const tag = document.createElement("li")
         tag.classList.add("calendar-item","blank");
         tag.innerText = calendarLastDay-i;
